@@ -1,0 +1,30 @@
+.image_home{
+    background-image: $bg;
+    height: $height;
+    width: $width ;
+    display: $flex;
+    justify-content: $flex-content;
+    align-items:$flex-titem;
+}
+#btn{
+    margin-bottom: $margin-bottom;
+    padding: $padding;
+    border-radius: $border-radius ;
+    outline: $outline ;
+    border: $border;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    background-color: $bgcolor;
+}
+.hero_section{
+    display: $display;
+}
+#back{
+    font-size: 30px;
+}
+.page_dentrez{
+    width :$width;
+    display: $flex;
+    justify-content: $flex-content;
+    align-items:$flex-titem;
+}
