@@ -1,0 +1,55 @@
+.hero_section {
+  width: 100%;
+  height: 100vh;
+  background: url(/images/go-green_healthy.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero_section button {
+  margin-bottom: 20px;
+  padding: 30px 90px;
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: rgb(97, 217, 248);
+}
+
+section .navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+}
+
+.paragraph {
+  font-size: 20px;
+}
+
+#input {
+  padding: 18px 30px;
+  width: 70%;
+  background-color: rgba(73, 138, 139, 0.871);
+  color: white;
+  font-size: 20px;
+  border-radius: 20px;
+  border: solid 2px;
+}
+
+::-moz-placeholder {
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+.photos {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}/*# sourceMappingURL=main.css.map */

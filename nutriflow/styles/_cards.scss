@@ -1,0 +1,53 @@
+@use "./variables";
+
+.hero_section{
+    width: variables.$width ;
+    height: variables.$heith;
+    background: variables.$bg;
+    display: variables.$display ;
+    justify-content: variables.$justify ;
+    align-items:variables.$align;
+}
+.hero_section button{
+    margin-bottom:variables.$marginB;
+    padding:variables.$paading;
+    font-size: variables.$size;
+    font-weight: variables.$wight;
+    border-radius: variables.$rounded;
+    outline: variables.$outline;
+    border: variables.$border;
+    background-color: variables.$bg-color;
+}
+section{
+    .navbar{
+      width: variables.$width;
+      display:variables.$display;
+      justify-content:variables.$content;
+      font-size: variables.$size;
+    }
+}
+.paragraph{
+    font-size: variables.$sizepara;
+}
+#input{
+    padding: variables.$pading;
+    width: variables.$width2;
+    background-color: variables.$bg2;
+    color: variables.$color;
+    font-size: variables.$sizepara;
+    border-radius: variables.$rounded;
+    border: variables.$border-solid;
+
+}
+::placeholder{
+    color: variables.$color;
+}
+.photos{
+    width:  variables.$width;
+    display: variables.$display;
+    justify-content:variables.$around;
+    gap:variables.$gap;
+}
+#image{
+    
+}
