@@ -3,11 +3,12 @@ export async function GetApi(){
      const response = await fetch("https://dummyjson.com/recipes");
     const data = await response.json();
     const recipes =data.recipes
-    return recipes
+    return recipes;
    } catch (error) {
     console.log(error);
     
     return []
    }
+   
 }
 // GetApi();
