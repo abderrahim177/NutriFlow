@@ -11,4 +11,4 @@ export async function GetApi(){
    }
    
 }
-// GetApi();
+ GetApi();

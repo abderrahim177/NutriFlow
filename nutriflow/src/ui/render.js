@@ -24,7 +24,6 @@ export function remove() {
 const recipes=await GetApi()
 export function AddData(){
     let image = document.getElementById('image');
-    // let image2 =document.getElementById('image2');
     for (let i = 0; i < recipes.length; i++) {
       image.innerHTML += `
       <div class = "container" data-index="${i}">
@@ -78,13 +77,13 @@ function getDetail(index){
     page_detail.style.display = 'block';
     page_detail.innerHTML = `
         
-        <img src="${recipes[index].image}" width="370">
+        <img id ="imageDetail" src="${recipes[index].image}" width="370">
         <div class ="details">
         <h2 class = "titre">${recipes[index].name}</h2>
         <p class = "para">${recipes[index].cookTimeMinutes}min</p>
         </div>
         <div class = 'elamentDetail'>
-            <div>
+            <div class = "elem">
                 <p>rating</p>
                 <span>${recipes[index].rating}</span>
             </div>
@@ -101,14 +100,45 @@ function getDetail(index){
                 <span>${recipes[index].caloriesPerServing}</span>
             </div>
             </div>
-        
     `;
 }
+let page_detail = document.querySelector('.image_detail');
+let page_home = document.querySelector('.page_home');
+let arrow = document.querySelector('#arrow');
+console.log(arrow);
+arrow.addEventListener('click' , function(){
+    page_detail.style.display = 'none';
+    page_home.style.display = 'block';
+});
 
-let arrow = document.getElementById('arrow');
-arrow.onclick = function(){
-    p
+let input = document.getElementById('input');
+let image = document.getElementById('image'); 
 
+function searchData(value){
+    image.innerHTML = ""; 
+
+    for (let i = 0 ; i < recipes.length ; i++){
+        if(recipes[i].name.toLowerCase().includes(value)){
+             image.innerHTML += `
+        <div class="container" data-index="${i}">
+        <img class="image" src="${recipes[i].image}" alt="">
+        <p>${recipes[i].name}</p>
+        <div class="baliz">
+          <i class="fa-solid fa-fire star"></i>
+          <p>${recipes[i].caloriesPerServing}</p>
+        </div>
+        <div class="favorits">
+          <i class="fa-solid fa-heart heart"></i>
+        </div>
+      </div>
+    `;
+        }
+    }
+}
+
+input.onkeyup = function(){
+    let value = input.value.toLowerCase();
+    searchData(value);
 }
 
 
